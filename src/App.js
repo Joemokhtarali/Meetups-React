@@ -3,11 +3,13 @@ import { Route, Switch } from "react-router-dom";
 import AllMeetups from "./pages/AllMeetups";
 import Favorites from "./pages/Favorites";
 import NewMeetup from "./pages/NewMeetup";
+import MainNavigation from "./Layouts/MainNavigation";
 
 function App() {
   return (
     <div className="App">
       {/* in case I want to add props to component wrap it within route */}
+      <MainNavigation />
       <Switch>
         <Route exact path="/" component={AllMeetups} />
         <Route path="/Favorites" component={Favorites} />
