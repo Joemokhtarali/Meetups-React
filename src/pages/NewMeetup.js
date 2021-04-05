@@ -23,7 +23,13 @@ function NewMeetup(props) {
             description: enteredDescription
         }
 
-        console.log(meetupData)
+        fetch('https://react-meetup-59fc3-default-rtdb.firebaseio.com/meetups.json', {
+            method: 'POST',
+            body: JSON.stringify(meetupData),
+            headers: {
+                'content-Type': 'application/json'
+            }
+        })
     }
 
   return (
